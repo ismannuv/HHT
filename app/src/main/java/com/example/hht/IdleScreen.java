@@ -25,6 +25,6 @@ public class IdleScreen extends ScreenController {
     public void initialize(Bundle savedInstanceState) {
         setThread(true,false,0);
         setContentView(R.layout.activity_main);
-        countDown =(TextView) findViewById(R.id.countDownTextView);
+        //countDown =(TextView) findViewById(R.id.countDownTextView);
     }
 }
