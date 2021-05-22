@@ -25,31 +25,51 @@ public class UserProfile extends ScreenController {
     private PopupWindow mPopupWindow;
     private ConstraintLayout mainlinearLayout;
     private int timeout=0;
+    private com.google.android.material.progressindicator.LinearProgressIndicator linearProgressIndicator;
+    private int progressStatus = 0;
 
 
     @Override
     public void every1sec() {
+
         if(timeout>=10)
         {
+            progressStatus=0;
             timeout=0;
             finish();
 
         }
+
         timeout++;
     }
 
     @Override
     public void initialize(Bundle savedInstanceState) {
-        setThread(true,false,0);
+        setThread(true,true,100);
         setContentView(R.layout.user_profile);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         mainlinearLayout=(ConstraintLayout) findViewById(R.id.userProfileLayout);
+        linearProgressIndicator=(com.google.android.material.progressindicator.LinearProgressIndicator)findViewById(R.id.progressBarUserProfile);
+
+
+
 
     }
 
+    @Override
+    protected int stateMachine() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                linearProgressIndicator.setProgress(progressStatus);
+            }
+        });
+        progressStatus+=1;
+        return 100;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

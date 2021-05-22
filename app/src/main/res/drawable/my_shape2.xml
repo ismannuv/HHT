@@ -6,8 +6,8 @@
         android:centerX="100%"
         android:centerY="100%"
         android:startColor="#FF24DEFF"
-        android:endColor="#FF2992CF"
-        android:gradientRadius="10"/>
+        android:endColor="@color/white"
+        android:gradientRadius="10dp"/>
     <corners
         android:bottomLeftRadius="100dp"
         android:bottomRightRadius="100dp"

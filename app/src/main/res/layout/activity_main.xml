@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IdleScreen"
-    android:background="#FFFAFA">
+    android:background="@color/blue_bg">
 
 
     <LinearLayout
@@ -96,8 +96,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Monday"
-                android:textColor="@color/white"
-                android:textSize="25sp"
+                android:textColor="@color/blue_bg"
+                android:textSize="28sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textClockHr"
                 app:layout_constraintEnd_toEndOf="@+id/textClockSec"
@@ -112,9 +112,8 @@
                 android:id="@+id/textClockHr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="@dimen/cardview_compat_inset_shadow"
                 android:format12Hour="hh :"
-                android:textColor="#ffffff"
+                android:textColor="@color/blue_bg"
                 android:textSize="80sp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toTopOf="@+id/guideline4">
@@ -138,7 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:format12Hour=" mm"
-                android:textColor="#ffffff"
+                android:textColor="@color/blue_bg"
                 android:textSize="80sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toTopOf="@+id/guideline4">
@@ -165,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:format12Hour="  ss"
-                android:textColor="#ffffff"
+                android:textColor="@color/blue_bg"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textClockMin"
@@ -181,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="21 March 2021"
-                android:textColor="@color/white"
+                android:textColor="@color/blue_bg"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
