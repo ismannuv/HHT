@@ -20,13 +20,20 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-public class UserProfile extends AppCompatActivity {
+public class UserProfile extends ScreenController {
 
     private PopupWindow mPopupWindow;
     private ConstraintLayout mainlinearLayout;
+
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void every1sec() {
+
+    }
+
+    @Override
+    public void initialize(Bundle savedInstanceState) {
+        setThread(true,false,0);
         setContentView(R.layout.user_profile);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -78,13 +85,6 @@ public class UserProfile extends AppCompatActivity {
                 String pin = newPin.getText().toString();
                 String confirPin = confirmPin.getText().toString();
 
-               /* if (password.equals("sipl@0203")){
-                    mPopupWindow.dismiss();
-
-                }
-                else {
-                    Toast.makeText(getApplicationContext(),"Wrong password. Try again.",Toast.LENGTH_LONG).show();
-                }*/
             }
         });
 

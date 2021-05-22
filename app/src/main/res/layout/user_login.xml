@@ -96,7 +96,6 @@
                 android:maxLength="4"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <!--<EditText
             android:id="@+id/passwordTb"
             android:layout_width="match_parent"
@@ -129,7 +128,7 @@
                 android:layout_margin="10dp"
                 android:textColor="@color/white" />
             <Button
-                android:id="@+id/adminLoginButton"
+                android:id="@+id/userLoginButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

@@ -293,8 +293,7 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="3dp"
                 android:orientation="vertical"
-                android:weightSum="100"
-                android:background="@drawable/ripple">
+                android:weightSum="100">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -310,7 +309,7 @@
                     android:layout_weight="30"
                     android:gravity="center"
                     android:text="Enter ID"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
