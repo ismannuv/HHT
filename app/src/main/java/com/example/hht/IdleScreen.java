@@ -9,6 +9,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -93,6 +95,7 @@ public class IdleScreen extends ScreenController {
                   showLoginPopup();
             }
         });
+
 
         registerReceiver(mBatInfoReceiver,new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
     }

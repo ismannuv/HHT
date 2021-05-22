@@ -1,5 +1,9 @@
 package com.example.hht;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -24,6 +28,7 @@ public class UserProfile extends ScreenController {
 
     private PopupWindow mPopupWindow;
     private ConstraintLayout mainlinearLayout;
+    private  LinearLayout mLinearLayout;
     private int timeout=0;
     private com.google.android.material.progressindicator.LinearProgressIndicator linearProgressIndicator;
     private int progressStatus = 0;
@@ -53,7 +58,14 @@ public class UserProfile extends ScreenController {
 
         mainlinearLayout=(ConstraintLayout) findViewById(R.id.userProfileLayout);
         linearProgressIndicator=(com.google.android.material.progressindicator.LinearProgressIndicator)findViewById(R.id.progressBarUserProfile);
+        mLinearLayout =(LinearLayout) findViewById(R.id.linearLayoutBg);
 
+        GradientDrawable gradientDrawable= (GradientDrawable) mLinearLayout.getBackground().mutate();
+        gradientDrawable.setColor(getResources().getColor(R.color.material_green));
+
+//        Drawable drawable = getDrawable(R.drawable.my_shape2);
+//        GradientDrawable gradientDrawable= (GradientDrawable) drawable;
+//        gradientDrawable.setColor(getResources().getColor(R.color.green));
 
 
 

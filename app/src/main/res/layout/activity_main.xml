@@ -220,13 +220,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:layout_constraintBottom_toBottomOf="@+id/guideline5">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal|center_vertical"
             android:layout_margin="10dp"
-            android:background="@drawable/my_rectangle">
+            android:background="@drawable/my_rectangle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
 
             <ImageView
                 android:id="@+id/inOut"
@@ -247,7 +256,7 @@
                 android:fontFamily="@font/roboto_bold"
                 android:padding="10dp"
                 android:text="IN"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="70sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -260,6 +269,7 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.5" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -413,6 +423,23 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.5" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/white"
+            android:background="@drawable/round_btn"
+            android:clickable="false"
+            android:textSize="28sp"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:text="Gate 1">
+
+        </Button>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
