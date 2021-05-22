@@ -24,11 +24,18 @@ public class UserProfile extends ScreenController {
 
     private PopupWindow mPopupWindow;
     private ConstraintLayout mainlinearLayout;
+    private int timeout=0;
 
 
     @Override
     public void every1sec() {
+        if(timeout>=10)
+        {
+            timeout=0;
+            finish();
 
+        }
+        timeout++;
     }
 
     @Override
